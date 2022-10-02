@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : SUDEER K
+  @group             : 
+  @last modified on  : 10-02-2022
+  @last modified by  : SUDEER K
+  Modifications Log
+  Ver   Date         Author     Modification
+  1.0   10-01-2022   SUDEER K   Initial Version
+-->
+<template>
+    <lightning-card icon-name="standard:voice_call" title="Whatsapp Messenger">
+        <template if:true={account.data}>
+            <div class="slds-form-element slds-var-p-horizontal_medium">
+                <label class="slds-form-element__label" for="text-input-id-46">
+                <abbr class="slds-required" title="required"></abbr>Phone Number</label>
+                <div class="slds-form-element__control">
+                <input type="Number" id="text-input-id-46" name="phoneNumber" placeholder="Enter Phone Number" class="slds-input" 
+                value={getphone} required/>
+                </div>
+            </div>
+        </template>
+            <div class="slds-form-element slds-var-p-horizontal_medium">
+                <label class="slds-form-element__label" for="text-input-id-46">
+                <abbr class="slds-required" title="required"></abbr>Message</label>
+                <div class="slds-form-element__control">
+                <input type="text" id="text-input-id-47" placeholder="Enter Your Message" name="whatsappMsg" class="slds-input" 
+                value={whatsappMsg} onchange={onWhatsappMsg} required/>
+                </div>
+                </div>  
+                <div class="slds-var-p-horizontal_medium">
+                <button class="slds-button slds-button_brand" style="margin-top:1em;" onclick={sendMessage}>Send</button>
+            </div>
+            </lightning-card>
+</template>
